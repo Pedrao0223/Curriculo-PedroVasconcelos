@@ -36,15 +36,62 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#intro">Início</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#idiomas">Idiomas</a></li>
+        <li><a href="#intro" data-i18n="nav.home">Início</a></li>
+        <li><a href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#formacao" data-i18n="nav.education">Formação</a></li>
+        <li><a href="#cursos" data-i18n="nav.courses">Cursos</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#idiomas" data-i18n="nav.languages">Idiomas</a></li>
       </ul>
 
       <div class="nav-actions">
+        <!-- Botões de Tradução (Inglês USA e Espanhol Espanha) -->
+        <button
+          id="lang-en"
+          class="lang-btn"
+          type="button"
+          data-lang="en"
+          title="Translate to English (Click again for Portuguese)"
+          aria-label="Translate to English"
+        >
+          <svg viewBox="0 0 60 40" class="nav-flag-svg" aria-hidden="true">
+            <rect width="60" height="40" fill="#B22234" rx="4" />
+            <path d="M0,4.6h60 M0,10.8h60 M0,16.9h60 M0,23.1h60 M0,29.2h60 M0,35.4h60" stroke="#FFFFFF" stroke-width="3.1" />
+            <rect width="26" height="21.5" fill="#3C3B6E" rx="2" />
+            <g fill="#FFFFFF">
+              <circle cx="5" cy="4.5" r="1.2" />
+              <circle cx="13" cy="4.5" r="1.2" />
+              <circle cx="21" cy="4.5" r="1.2" />
+              <circle cx="9" cy="9" r="1.2" />
+              <circle cx="17" cy="9" r="1.2" />
+              <circle cx="5" cy="13.5" r="1.2" />
+              <circle cx="13" cy="13.5" r="1.2" />
+              <circle cx="21" cy="13.5" r="1.2" />
+              <circle cx="9" cy="17.5" r="1.2" />
+              <circle cx="17" cy="17.5" r="1.2" />
+            </g>
+          </svg>
+          <span>EN</span>
+        </button>
+
+        <button
+          id="lang-es"
+          class="lang-btn"
+          type="button"
+          data-lang="es"
+          title="Traducir al Español (Clic de nuevo para Portugués)"
+          aria-label="Traducir al Español"
+        >
+          <svg viewBox="0 0 60 40" class="nav-flag-svg" aria-hidden="true">
+            <rect width="60" height="40" fill="#AA151B" rx="4" />
+            <rect y="10" width="60" height="20" fill="#F1BF00" />
+            <rect x="14" y="14.5" width="6" height="8" rx="1.5" fill="#AA151B" stroke="#FFFFFF" stroke-width="0.8" />
+            <circle cx="17" cy="13.5" r="1.4" fill="#F1BF00" stroke="#AA151B" stroke-width="0.6" />
+          </svg>
+          <span>ES</span>
+        </button>
+
+        <!-- Alternador de Modo Claro / Escuro -->
         <button id="theme-toggle" class="action-btn" type="button" title="Alternar entre Modo Escuro e Claro">
           <i data-lucide="palette"></i>
           <span id="theme-label">Modo Claro</span>
@@ -89,7 +136,7 @@
         <div class="hero-headline">
           <div class="role-pill">
             <span class="pulse-dot"></span>
-            <span>Analista de Estratégia e Ciência de Dados</span>
+            <span data-i18n="hero.role">Analista de Estratégia e Ciência de Dados</span>
           </div>
 
           <h1 class="hero-name">Pedro Vasconcelos</h1>
@@ -97,21 +144,23 @@
           <div class="hero-summary-box">
             <div class="hero-summary-label">
               <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
-              <span>Resumo Profissional</span>
+              <span data-i18n="hero.summaryLabel">Resumo Profissional</span>
             </div>
-            <p>
+            <p data-i18n="hero.summaryText">
               Administrador de formação com foco em inovação tecnológica, atualmente me especializando em Inteligência Artificial e Machine Learning e ADS. Unindo visão estratégica aprofundada e proatividade, busco aplicar soluções de dados e modelos preditivos para otimizar processos e resolver problemas de alta complexidade técnica.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Canais de Contato Direto (WhatsApp, E-mail, LinkedIn, GitHub) -->
+      <!-- Canais de Contato Direto (WhatsApp sem expor número, E-mail, LinkedIn, GitHub) -->
       <div class="contact-grid">
-        <!-- Contato / Arroba -->
-        <div
-          class="contact-card"
-          title="@Pedrovasconcelos23"
+        <!-- WhatsApp (Redireciona via JS ao clicar sem exibir o número na tela ou barra de link) -->
+        <button
+          id="whatsapp-btn"
+          type="button"
+          class="contact-card contact-card-btn"
+          title="Conversar no WhatsApp (@Pedrovasconcelos23)"
         >
           <div class="contact-icon-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -120,10 +169,10 @@
             </svg>
           </div>
           <div class="contact-info">
-            <span class="contact-label">Contato</span>
+            <span class="contact-label">WhatsApp</span>
             <span class="contact-value">@Pedrovasconcelos23</span>
           </div>
-        </div>
+        </button>
 
         <!-- E-mail -->
         <a
@@ -135,12 +184,12 @@
             <i data-lucide="mail"></i>
           </div>
           <div class="contact-info">
-            <span class="contact-label">E-mail</span>
+            <span class="contact-label" data-i18n="contact.emailLabel">E-mail</span>
             <span class="contact-value">profissionalpedro23@gmail.com</span>
           </div>
         </a>
 
-        <!-- LinkedIn (SVG vetorial embutido) -->
+        <!-- LinkedIn -->
         <a
           href="https://www.linkedin.com/in/pedro-henrique-415921284/"
           target="_blank"
@@ -161,7 +210,7 @@
           </div>
         </a>
 
-        <!-- GitHub (SVG vetorial embutido) -->
+        <!-- GitHub -->
         <a
           href="https://github.com/Pedrao0223"
           target="_blank"
@@ -196,19 +245,19 @@
             <div class="section-icon">
               <i data-lucide="briefcase"></i>
             </div>
-            <h2 id="titulo-experiencia" class="section-title">Experiência Profissional</h2>
+            <h2 id="titulo-experiencia" class="section-title" data-i18n="exp.sectionTitle">Experiência Profissional</h2>
           </div>
         </div>
 
         <div class="experience-box">
           <div class="experience-header">
-            <h3 class="experience-role">Estagiário em Administração - Empresa Winpro</h3>
+            <h3 class="experience-role" data-i18n="exp.role">Estagiário em Administração - Empresa Winpro</h3>
             <span class="period-badge">
               <i data-lucide="calendar"></i>
-              <span>Abril/2023 - Agosto/2023</span>
+              <span data-i18n="exp.period">Abril/2023 - Agosto/2023</span>
             </span>
           </div>
-          <p class="experience-desc">
+          <p class="experience-desc" data-i18n-html="exp.desc">
             <strong>Atividades:</strong> Responsável pela captação e qualificação de leads, utilizando técnicas de mapeamento de clientes para alavancar o número de assinaturas da plataforma e fortalecer o relacionamento com a base ativa.
           </p>
         </div>
@@ -223,44 +272,44 @@
             <div class="section-icon">
               <i data-lucide="graduation-cap"></i>
             </div>
-            <h2 id="titulo-formacao" class="section-title">Formação Acadêmica</h2>
+            <h2 id="titulo-formacao" class="section-title" data-i18n="edu.sectionTitle">Formação Acadêmica</h2>
           </div>
         </div>
 
         <div class="timeline">
           <article class="timeline-node">
             <span class="timeline-marker"></span>
-            <h3 class="timeline-degree">Inteligência Artificial e Machine Learning</h3>
-            <p class="timeline-school">Faculdade de Tecnologia e Inovação Senac-DF</p>
+            <h3 class="timeline-degree" data-i18n="edu.deg1">Inteligência Artificial e Machine Learning</h3>
+            <p class="timeline-school" data-i18n="edu.school1">Faculdade de Tecnologia e Inovação Senac-DF</p>
             <span class="timeline-year">
               <i data-lucide="calendar" style="width: 13px; height: 13px;"></i>
-              <span>2026 - 2028 (Previsão)</span>
+              <span data-i18n="edu.year1">2026 - 2028 (Previsão)</span>
             </span>
           </article>
 
           <article class="timeline-node">
             <span class="timeline-marker"></span>
-            <h3 class="timeline-degree">Análise e Desenvolvimento de Sistemas</h3>
-            <p class="timeline-school">Gran Faculdade</p>
+            <h3 class="timeline-degree" data-i18n="edu.deg2">Análise e Desenvolvimento de Sistemas</h3>
+            <p class="timeline-school" data-i18n="edu.school2">Gran Faculdade</p>
             <span class="timeline-year">
               <i data-lucide="calendar" style="width: 13px; height: 13px;"></i>
-              <span>2026 - 2028 (Previsão)</span>
+              <span data-i18n="edu.year2">2026 - 2028 (Previsão)</span>
             </span>
           </article>
 
           <article class="timeline-node">
             <span class="timeline-marker"></span>
-            <h3 class="timeline-degree">Administração</h3>
-            <p class="timeline-school">Centro Universitário Católica de Brasília</p>
+            <h3 class="timeline-degree" data-i18n="edu.deg3">Administração</h3>
+            <p class="timeline-school" data-i18n="edu.school3">Centro Universitário Católica de Brasília</p>
             <span class="timeline-year">
               <i data-lucide="calendar" style="width: 13px; height: 13px;"></i>
-              <span>2022 - 2025</span>
+              <span data-i18n="edu.year3">2022 - 2025</span>
             </span>
           </article>
         </div>
       </section>
 
-      <!-- OUTROS CURSOS (Padronizado na mesma estrutura, altura e hierarquia) -->
+      <!-- OUTROS CURSOS -->
       <section id="cursos" class="bento-card col-6" aria-labelledby="titulo-cursos">
         <i data-lucide="award" class="card-watermark"></i>
 
@@ -269,7 +318,7 @@
             <div class="section-icon">
               <i data-lucide="award"></i>
             </div>
-            <h2 id="titulo-cursos" class="section-title">Outros Cursos</h2>
+            <h2 id="titulo-cursos" class="section-title" data-i18n="courses.sectionTitle">Outros Cursos</h2>
           </div>
         </div>
 
@@ -279,11 +328,11 @@
               <i data-lucide="code-2"></i>
             </div>
             <div class="course-body">
-              <h3 class="course-title">Análise de dados com Python</h3>
+              <h3 class="course-title" data-i18n="courses.c1Title">Análise de dados com Python</h3>
               <p class="course-provider">Udemy</p>
               <span class="course-date-pill">
                 <i data-lucide="calendar" style="width: 13px; height: 13px;"></i>
-                <span>Janeiro/2026</span>
+                <span data-i18n="courses.c1Date">Janeiro/2026</span>
               </span>
             </div>
           </article>
@@ -293,11 +342,11 @@
               <i data-lucide="bar-chart-3"></i>
             </div>
             <div class="course-body">
-              <h3 class="course-title">Curso de Power BI</h3>
+              <h3 class="course-title" data-i18n="courses.c2Title">Curso de Power BI</h3>
               <p class="course-provider">Udemy</p>
               <span class="course-date-pill">
                 <i data-lucide="calendar" style="width: 13px; height: 13px;"></i>
-                <span>Setembro - Novembro/2025</span>
+                <span data-i18n="courses.c2Date">Setembro - Novembro/2025</span>
               </span>
             </div>
           </article>
@@ -307,11 +356,11 @@
               <i data-lucide="table-2"></i>
             </div>
             <div class="course-body">
-              <h3 class="course-title">Curso de Excel</h3>
+              <h3 class="course-title" data-i18n="courses.c3Title">Curso de Excel</h3>
               <p class="course-provider">Udemy</p>
               <span class="course-date-pill">
                 <i data-lucide="calendar" style="width: 13px; height: 13px;"></i>
-                <span>Agosto - Setembro/2025</span>
+                <span data-i18n="courses.c3Date">Agosto - Setembro/2025</span>
               </span>
             </div>
           </article>
@@ -327,39 +376,39 @@
             <div class="section-icon">
               <i data-lucide="layers"></i>
             </div>
-            <h2 id="titulo-habilidades" class="section-title">Habilidades</h2>
+            <h2 id="titulo-habilidades" class="section-title" data-i18n="skills.sectionTitle">Habilidades</h2>
           </div>
         </div>
 
         <div class="skills-showcase">
           <div class="skill-item">
             <div class="skill-icon"><i data-lucide="compass"></i></div>
-            <span>Liderança</span>
+            <span data-i18n="skills.s1">Liderança</span>
           </div>
 
           <div class="skill-item">
             <div class="skill-icon"><i data-lucide="messages-square"></i></div>
-            <span>Boa Comunicação</span>
+            <span data-i18n="skills.s2">Boa Comunicação</span>
           </div>
 
           <div class="skill-item">
             <div class="skill-icon"><i data-lucide="lightbulb"></i></div>
-            <span>Resolução de problemas</span>
+            <span data-i18n="skills.s3">Resolução de problemas</span>
           </div>
 
           <div class="skill-item">
             <div class="skill-icon"><i data-lucide="users"></i></div>
-            <span>Trabalho em equipe</span>
+            <span data-i18n="skills.s4">Trabalho em equipe</span>
           </div>
 
           <div class="skill-item">
             <div class="skill-icon"><i data-lucide="brain"></i></div>
-            <span>Pensamento crítico</span>
+            <span data-i18n="skills.s5">Pensamento crítico</span>
           </div>
 
           <div class="skill-item">
             <div class="skill-icon"><i data-lucide="refresh-cw"></i></div>
-            <span>Adaptabilidade</span>
+            <span data-i18n="skills.s6">Adaptabilidade</span>
           </div>
         </div>
       </section>
@@ -373,7 +422,7 @@
             <div class="section-icon">
               <i data-lucide="globe"></i>
             </div>
-            <h2 id="titulo-idiomas" class="section-title">Idiomas</h2>
+            <h2 id="titulo-idiomas" class="section-title" data-i18n="lang.sectionTitle">Idiomas</h2>
           </div>
         </div>
 
@@ -409,8 +458,8 @@
             </div>
             <div class="language-info">
               <div class="language-top">
-                <h3 class="language-name">Inglês</h3>
-                <span class="language-level">Avançado</span>
+                <h3 class="language-name" data-i18n="lang.enName">Inglês</h3>
+                <span class="language-level" data-i18n="lang.enLevel">Avançado</span>
               </div>
               <div class="language-bar">
                 <div class="language-progress progress-advanced"></div>
@@ -424,7 +473,6 @@
               <svg viewBox="0 0 60 40" class="flag-svg" aria-label="Bandeira da Espanha">
                 <rect width="60" height="40" fill="#AA151B" rx="4" />
                 <rect y="10" width="60" height="20" fill="#F1BF00" />
-                <!-- Brasão simplificado da Espanha -->
                 <rect x="14" y="14.5" width="6" height="8" rx="1.5" fill="#AA151B" stroke="#FFFFFF" stroke-width="0.8" />
                 <circle cx="17" cy="13.5" r="1.4" fill="#F1BF00" stroke="#AA151B" stroke-width="0.6" />
                 <rect x="11.5" y="14.5" width="1.2" height="8.5" fill="#FFFFFF" />
@@ -433,8 +481,8 @@
             </div>
             <div class="language-info">
               <div class="language-top">
-                <h3 class="language-name">Espanhol</h3>
-                <span class="language-level">Intermediário</span>
+                <h3 class="language-name" data-i18n="lang.esName">Espanhol</h3>
+                <span class="language-level" data-i18n="lang.esLevel">Intermediário</span>
               </div>
               <div class="language-bar">
                 <div class="language-progress progress-intermediate"></div>
@@ -452,9 +500,9 @@
       <div class="cta-content">
         <div class="cta-tag">
           <i data-lucide="folder-git-2" style="width: 15px; height: 15px;"></i>
-          <span id="titulo-adicionais">Informações Adicionais</span>
+          <span id="titulo-adicionais" data-i18n="cta.tag">Informações Adicionais</span>
         </div>
-        <p class="cta-text">
+        <p class="cta-text" data-i18n="cta.text">
           Portfólio completo de cursos, certificações e projetos técnicos disponível em:
         </p>
       </div>
@@ -470,7 +518,7 @@
           <rect width="4" height="12" x="2" y="9" />
           <circle cx="4" cy="4" r="2" />
         </svg>
-        <span>Acessar LinkedIn</span>
+        <span data-i18n="cta.btn">Acessar LinkedIn</span>
         <i data-lucide="arrow-up-right"></i>
       </a>
     </section>
