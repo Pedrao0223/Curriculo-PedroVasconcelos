@@ -349,43 +349,6 @@ body {
   align-items: flex-start;
 }
 
-.vibe-coding-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.45rem 1rem;
-  border-radius: 999px;
-  background: rgba(36, 123, 160, 0.22);
-  border: 1px solid rgba(27, 152, 224, 0.45);
-  color: var(--text-soft);
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.4;
-  margin-bottom: 0.85rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.vibe-coding-badge strong {
-  color: var(--carolina);
-  font-weight: 700;
-}
-
-.vibe-icon {
-  font-size: 0.95rem;
-  filter: drop-shadow(0 0 6px var(--carolina));
-}
-
-[data-theme="light"] .vibe-coding-badge {
-  background: rgba(0, 100, 148, 0.08);
-  border-color: rgba(0, 100, 148, 0.28);
-  color: var(--text-soft);
-}
-
-[data-theme="light"] .vibe-coding-badge strong {
-  color: var(--sapphire);
-}
-
 .role-pill {
   display: inline-flex;
   align-items: center;
