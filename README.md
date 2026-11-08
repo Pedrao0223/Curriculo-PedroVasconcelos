@@ -65,5 +65,5 @@ Como o projeto é construído em tecnologia web nativa (zero dependências de co
 
 - **LinkedIn:** [linkedin.com/in/pedro-henrique-415921284](https://www.linkedin.com/in/pedro-henrique-415921284/)
 - **GitHub:** [github.com/Pedrao0223](https://github.com/Pedrao0223)
-- **WhatsApp:** [(61) 99590-0447](https://wa.me/5561995900447)
+- **Contato:** `@Pedrovasconcelos23`
 - **E-mail:** [profissionalpedro23@gmail.com](mailto:profissionalpedro23@gmail.com)

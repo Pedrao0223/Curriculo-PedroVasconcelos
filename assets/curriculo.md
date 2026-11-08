@@ -1,9 +1,10 @@
 # Pedro Vasconcelos
 
-**Analista de Estratégia e Ciência de Dados
-Telefone:** (61) 99590-0447
+**Analista de Estratégia e Ciência de Dados**
+**Contato:** @Pedrovasconcelos23
 **E-mail:** profissionalpedro23@gmail.com
 **LinkedIn:** [linkedin.com/in/pedro-henrique-415921284](https://www.linkedin.com/in/pedro-henrique-415921284/)
+**GitHub:** [github.com/Pedrao0223](https://github.com/Pedrao0223)
 
 ## RESUMO PROFISSIONAL
 
@@ -40,6 +41,11 @@ Administrador de formação com foco em inovação tecnológica, atualmente me e
 * **Análise de dados com Python** - Udemy (Janeiro/2026)
 * **Curso de Power BI** - Udemy (Setembro - Novembro/2025)
 * **Curso de Excel** - Udemy (Agosto - Setembro/2025)
+
+## IDIOMAS
+
+* **Inglês:** Avançado
+* **Espanhol:** Intermediário
 
 ## INFORMAÇÕES ADICIONAIS
 
